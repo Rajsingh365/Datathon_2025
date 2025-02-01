@@ -17,7 +17,7 @@ app.use(cors());
 app.use("/api/auth",authRoutes);
 
 
-app.get("/",(req,res)=>{
+app.get("/",(req,res)=> {
   res.json({message: "Hello world"});
 })
 
