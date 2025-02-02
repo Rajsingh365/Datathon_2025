@@ -24,16 +24,16 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/features"
+                to="/create-plan"
                 className="hover:bg-[#008080] px-3 py-2 rounded-md text-sm font-medium"
               >
-                Features
+                Create Plan
               </Link>
               <Link
-                to="/pricing"
+                to="/dashboard"
                 className="hover:bg-[#008080] px-3 py-2 rounded-md text-sm font-medium"
               >
-                Pricing
+                DashBoard
               </Link>
               <Link
                 to="/maps"
@@ -47,12 +47,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-              <Link
-                to="/signup"
-                className="bg-[#FF9800] hover:bg-[#F57C00] text-white px-4 py-2 rounded-md text-sm font-medium"
-              >
-                Sign Up
-              </Link>
+              
             </div>
           </div>
           <div className="md:hidden flex items-center">
