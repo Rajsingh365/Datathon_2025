@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const subscriptionsSchema = new mongoose.Schema(
+const offersSchema = new mongoose.Schema(
   {
     // Other fields for the subscription (e.g., name, plan, etc.)
     offers: [
@@ -21,5 +21,5 @@ const subscriptionsSchema = new mongoose.Schema(
   { timestamps: true } // Adds createdAt and updatedAt fields
 );
 
-const Subscriptions = mongoose.model("Subscription", subscriptionsSchema);
-export default Subscriptions;
+const Offers = mongoose.model("Offer", offersSchema);
+export default Offers;

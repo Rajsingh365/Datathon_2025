@@ -16,10 +16,18 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 6,
     },
-    additionalinfo: {
-      type: Object,
-      default: {}
-    }
+    subscription: [
+      {
+        sub_name: {
+          type: String,
+          required: true,
+        },
+        is_activated: {
+          type: Boolean,
+          default: false,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );
