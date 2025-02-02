@@ -36,7 +36,7 @@ const Dashboard = () => {
   const fetchInternetServiceData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/internetservice`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/internetservice`
       );
       const data = await response.json();
 
@@ -63,7 +63,7 @@ const Dashboard = () => {
   const fetchContractData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/contract`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/contract`
       );
       const data = await response.json();
 
@@ -93,7 +93,7 @@ const Dashboard = () => {
   const fetchChurnData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/churn`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/churn`
       );
       const data = await response.json();
 
@@ -120,9 +120,10 @@ const Dashboard = () => {
   const fetchMetrics = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/summary`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/summary`
       );
       const data = await response.json();
+      console.log('Metrics', data);
       setMetrics(data);
     } catch (error) {
       console.error("Error fetching metrics:", error);
@@ -133,7 +134,7 @@ const Dashboard = () => {
   const fetchGenderData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/gender`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/gender`
       );
       const data = await response.json();
 
@@ -153,7 +154,7 @@ const Dashboard = () => {
   const fetchSeniorityData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/seniorcitizen`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/seniorcitizen`
       );
       const data = await response.json();
 
@@ -182,7 +183,7 @@ const Dashboard = () => {
   const fetchTenureData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/api/dashboard/tenure`
+        `${import.meta.env.VITE_BACKEND_URL}/api/dashboard/tenure`
       );
       const data = await response.json();
 
@@ -208,7 +209,7 @@ const Dashboard = () => {
         <MetricCard
           icon={FiTrendingDown}
           title="Churn Rate"
-          value={`${metrics.churnRate?.toFixed(1) || 0}%`}
+          value={`${Number(metrics.churnRate?.toFixed(1)) || 0}%`}
           trend={metrics.churnRate > 30 ? "High" : "Normal"}
           color="bg-red-100 text-red-600"
         />
@@ -222,7 +223,7 @@ const Dashboard = () => {
         <MetricCard
           icon={FiClock}
           title="Avg Tenure"
-          value={`${metrics.avgTenure?.toFixed(1) || 0} mos`}
+          value={`${metrics.avgTenure?.toFixed(1) || 0} months`}
           trend="Retention"
           color="bg-green-100 text-green-600"
         />

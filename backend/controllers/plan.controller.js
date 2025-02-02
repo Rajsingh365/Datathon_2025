@@ -165,7 +165,7 @@ export const sendEmail = async (req, res) => {
 
         
         // ✅ Send the email
-        forwardEmail(subject, body, imageUrl);
+        // forwardEmail(subject, body, imageUrl);
         console.log('Forwarding Email');
     }
 }

@@ -29,7 +29,7 @@ const UserPage = () => {
     const fetchUser = async () => {
       try {
         if(!userId) return;
-        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/dashboard/customers/${userId}`);
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dashboard/customers/${userId}`);
         const data = await response.json();
         console.log(data)
         setUser(data);

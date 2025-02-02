@@ -10,6 +10,7 @@ import UserChurnPage from "./pages/UserChrunPage";
 import SubscriptionDetails from "./pages/SubscriptionDetails";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
+import { Maps } from "./pages/Maps";
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
         <Route path="/signup" element={<h1>Signup</h1>} />
         <Route path="/create-plan" element={<CreatePlan/>}/>
         <Route path="/dummy" element={<Dummy/>} />
+        <Route path="/maps" element={<Maps/>} />
+
       </Routes>
       <Footer/>
       <Toaster/>
