@@ -5,6 +5,7 @@ import connectDb from "./db/db_connect.js";
 
 import authRoutes from "./routes/auth.route.js"
 import planRoutes from "./routes/plan.route.js"
+import dashRoutes from "./routes/dashboard.route.js"
 
 
 
@@ -17,6 +18,8 @@ app.use(cors());
 
 app.use("/api/auth",authRoutes);
 app.use("/api/plan", planRoutes);
+app.use("/api/dashboard",dashRoutes);
+
 
 app.get("/",(req,res)=>{
   res.json({message: "Hello world"});

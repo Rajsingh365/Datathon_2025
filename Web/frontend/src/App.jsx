@@ -5,6 +5,11 @@ import Footer from "./components/Footer";
 import CreatePlan from "./pages/CreatePlan";
 import Dummy from "./pages/Dummy";
 import { Toaster } from "react-hot-toast";
+import Dashboard from "./pages/Dashboard";
+import UserChurnPage from "./pages/UserChrunPage";
+import SubscriptionDetails from "./pages/SubscriptionDetails";
+import HomePage from "./pages/HomePage";
+import UserPage from "./pages/UserPage";
 
 function App() {
 
@@ -13,6 +18,10 @@ function App() {
       <Navbar/> 
       <Routes>
         <Route path="/" element={<h1>hello</h1>} />
+        <Route path="/dashboard" element={<HomePage/>} />
+        <Route path="/user-chrun-page" element={<UserChurnPage/>} />
+        <Route path="/subscriptions-details" element={<SubscriptionDetails/>} />
+        <Route path="/users/:userId" element={<UserPage />} />
         <Route path="/login" element={<h1>Login</h1>} />
         <Route path="/signup" element={<h1>Signup</h1>} />
         <Route path="/create-plan" element={<CreatePlan/>}/>
