@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from '../assets/logo.jpg'; // Make sure the path to the logo is correct
+import logo from '../assets/logo.png'; // Make sure the path to the logo is correct
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center ">
             <Link to="/">
-              <img src={logo} alt="TrustApp Logo" className="h-14" />
+              <img src={logo} alt="TrustApp Logo" className="h-14 rounded-full" />
             </Link>
           </div>
           <div className="hidden md:block">
