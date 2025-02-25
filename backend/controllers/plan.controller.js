@@ -26,8 +26,8 @@ export const generateImage = async (req, res) => {
       model: "ZB-Tech/Text-to-Image",
       inputs: imageGenerationPrompt,
       parameters: {
-        num_inference_steps: 50,
-        guidance_scale: 5,
+        num_inference_steps: 80,
+        guidance_scale: 10,
         seed: 42,
         negative_prompt: "blurry, low quality, distorted, unrealistic, text, watermark",
         scheduler: "DPMSolverMultistep",
@@ -165,7 +165,7 @@ export const sendEmail = async (req, res) => {
 
         
         // ✅ Send the email
-        // forwardEmail(subject, body, imageUrl);
+        forwardEmail(subject, body, imageUrl);
         console.log('Forwarding Email');
     }
 }
